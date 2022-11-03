@@ -46,7 +46,7 @@
               :sitekey="siteKey"
               @verify="verifyMethod"
               theme="clean"
-              class="recaptcha my-2"
+              class="recaptcha"
               tabindex="3"
             >
             </vue-recaptcha>
@@ -384,7 +384,7 @@ export default {
 }
 .recaptcha div {
   width: 100% !important;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 html,
