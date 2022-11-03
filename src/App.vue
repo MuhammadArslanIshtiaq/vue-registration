@@ -2,7 +2,7 @@
   <div id="app" class="row">
     <div class="col-lg-10 col-xl-10 col-md-12 wrapper-holder">
       <div class="row m-0 custom-heading text-center">
-        <p class="heading-2">Sign up here to get access to the stream</p>
+        <p class="heading-2">To be invited to the event please let us know by completing your details below.</p>
       </div>
       <div class="row m-0 error-heading" v-if="error">
         <div class="text-center">
@@ -89,7 +89,7 @@ export default {
     submitReg() {
       this.error = null;
       axios
-        .post("http://54.174.5.102:3001/api/user", {
+        .post("https://api.saudi-registration.com/api/user", {
           name: this.name,
           email: this.email,
         })
