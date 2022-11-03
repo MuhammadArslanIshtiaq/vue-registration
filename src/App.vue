@@ -8,36 +8,39 @@
         <div class="col-12 error-heading" v-if="error">
           {{ error }}
         </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6 text-left">
-          <div class="input-holder p-1 my-2">
-            <label for="name" class="">Name</label>
+        <div class="col-xl-3 col-lg-3 col-sm-6 text-left p-2">
+          <div class="input-holder my-2 h-100 button-holder">
             <input
               type="text"
-              placeholder="Full Name:"
               v-model="name"
+              placeholder="Full Name"
               class="form-control border-0"
+              tabindex="1"
             />
           </div>
         </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6 text-left">
-          <div class="input-holder p-1 my-2">
-            <label for="email">Email</label>
+        <div class="col-xl-3 col-lg-3 col-sm-6 text-left p-2">
+          <div class="input-holder my-2 h-100 button-holder">
             <input
               type="email"
-              placeholder="email@example.com"
               v-model="email"
+              placeholder="Email"
               class="form-control border-0"
+              tabindex="2"
             />
           </div>
         </div>
         <div class="col-xl-3 col-lg-3 col-sm-6">
-          <vue-recaptcha
-            :sitekey="siteKey"
-            @verify="verifyMethod"
-            theme="clean"
-            class="recaptcha my-2"
-          >
-          </vue-recaptcha>
+          <div class="button-holder">
+            <vue-recaptcha
+              :sitekey="siteKey"
+              @verify="verifyMethod"
+              theme="clean"
+              class="recaptcha my-2"
+              tabindex="3"
+            >
+            </vue-recaptcha>
+          </div>
         </div>
         <div class="col-xl-2 col-lg-3 col-sm-6">
           <div class="h-100 button-holder">
@@ -45,6 +48,7 @@
               class="btn btn-large btn-light custom-button btn-lg"
               :disabled="!verified"
               @click="submitReg"
+              tabindex="4"
             >
               Submit
             </button>
@@ -103,6 +107,7 @@ export default {
 }
 .recaptcha div {
   width: 100% !important;
+  margin-top: 10px;
 }
 
 html,
