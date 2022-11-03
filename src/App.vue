@@ -4,10 +4,17 @@
       <div class="row m-0 custom-heading text-center">
         <p class="heading-2">Sign up here to get access to the stream</p>
       </div>
-      <div class="row m-0">
-        <div class="col-12 error-heading" v-if="error">
-          {{ error }}
+      <div class="row m-0 error-heading" v-if="error">
+        <div class="text-center">
+          <div v-if="success" class="alert alert-success" role="alert">
+            {{ error }}
+          </div>
+          <div v-else class="alert alert-light" role="alert">
+            {{ error }}
+          </div>
         </div>
+      </div>
+      <div class="row m-0" v-if="!success">
         <div class="col-xl-3 col-lg-3 col-sm-6 text-left p-2">
           <div class="input-holder my-2 h-100 button-holder">
             <input
@@ -72,6 +79,7 @@ export default {
       siteKey: "6LfmB9IiAAAAAB9OLZZj83qPRgSdcTbHDwtkeJ82",
       verified: false,
       error: null,
+      success: false,
     };
   },
   methods: {
@@ -90,6 +98,7 @@ export default {
             this.error = "Email already registered.";
           } else {
             this.error = "Successful Registration.";
+            this.success = true;
           }
         });
     },
@@ -141,20 +150,20 @@ input[type="email"]:focus {
 input[type="text"]::placeholder,
 input[type="email"]::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
+  color: #f3bc86;
   opacity: 1; /* Firefox */
 }
 
 input[type="text"]:-ms-input-placeholder,
 input[type="email"]:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: white;
+  color: #f3bc86;
 }
 
 input[type="text"]::-ms-input-placeholder,
 input[type="email"]::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: white;
+  color: #f3bc86;
 }
 
 label {
@@ -178,6 +187,7 @@ label {
 .custom-heading {
   text-align: center;
   color: white;
+  margin: auto;
 }
 .custom-heading {
   font-family: "Noto Sans";
