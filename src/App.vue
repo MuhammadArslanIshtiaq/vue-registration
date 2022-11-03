@@ -29,7 +29,7 @@
             />
           </div>
         </div>
-        <div class="col-xl-3 col-lg-3 col-sm-6 text-left p-2">
+        <div class="col-xl-3 col-lg-3 col-sm-6 text-left email-box">
           <div class="input-holder my-2 h-100 button-holder">
             <input
               type="email"
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="col-xl-2 col-lg-3 col-sm-6">
-          <div class="h-100 button-holder">
+          <div class="h-100 button-holder my-2">
             <button
               class="btn btn-large btn-light custom-button btn-lg"
               :disabled="!verified"
@@ -468,6 +468,15 @@ label {
 @media screen and (min-width: 2560px) {
   .button-holder {
     justify-content: left;
+  }
+}
+.email-box {
+  padding: 0.5rem !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .email-box {
+    padding-left: 0px !important;
   }
 }
 </style>
