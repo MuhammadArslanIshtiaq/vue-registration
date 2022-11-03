@@ -151,7 +151,8 @@ export default {
   src: url("./assets/FuturaPTCond-ExtraBoldObl.eot");
   src: local("Futura PT Cond Extra Bold Oblique"),
     local("FuturaPTCond-ExtraBoldObl"),
-    url("./assets/FuturaPTCond-ExtraBoldObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-ExtraBoldObl.eot?#iefix")
+      format("embedded-opentype"),
     url("./assets/FuturaPTCond-ExtraBoldObl.woff2") format("woff2"),
     url("./assets/FuturaPTCond-ExtraBoldObl.woff") format("woff"),
     url("./assets/FuturaPTCond-ExtraBoldObl.ttf") format("truetype");
@@ -283,7 +284,8 @@ export default {
   font-family: "Futura PT Cond Extra";
   src: url("./assets/FuturaPTCond-ExtraBold.eot");
   src: local("Futura PT Cond Extra Bold"), local("FuturaPTCond-ExtraBold"),
-    url("./assets/FuturaPTCond-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
     url("./assets/FuturaPTCond-ExtraBold.woff2") format("woff2"),
     url("./assets/FuturaPTCond-ExtraBold.woff") format("woff"),
     url("./assets/FuturaPTCond-ExtraBold.ttf") format("truetype");
@@ -355,7 +357,8 @@ export default {
   font-family: "Futura PT Cond";
   src: url("./assets/FuturaPTCond-MediumObl.eot");
   src: local("Futura PT Cond Medium Oblique"), local("FuturaPTCond-MediumObl"),
-    url("./assets/FuturaPTCond-MediumObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-MediumObl.eot?#iefix")
+      format("embedded-opentype"),
     url("./assets/FuturaPTCond-MediumObl.woff2") format("woff2"),
     url("./assets/FuturaPTCond-MediumObl.woff") format("woff"),
     url("./assets/FuturaPTCond-MediumObl.ttf") format("truetype");
@@ -477,6 +480,12 @@ label {
 @media screen and (min-width: 1200px) {
   .email-box {
     padding-left: 0px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 50% !important;
   }
 }
 </style>
