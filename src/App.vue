@@ -2,7 +2,10 @@
   <div id="app" class="row">
     <div class="col-lg-10 col-xl-10 col-md-12 wrapper-holder">
       <div class="row m-0 custom-heading text-center">
-        <p class="heading-2">To be invited to the event please let us know by completing your details below.</p>
+        <p class="heading-2">
+          To be invited to the event please let us know by completing your
+          details below.
+        </p>
       </div>
       <div class="row m-0 error-heading" v-if="error">
         <div class="text-center">
@@ -107,8 +110,273 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/FuturaPT-Bold.eot");
+  src: local("Futura PT Bold"), local("FuturaPT-Bold"),
+    url("./assets/FuturaPT-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-Bold.woff2") format("woff2"),
+    url("./assets/FuturaPT-Bold.woff") format("woff"),
+    url("./assets/FuturaPT-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/FuturaPT-Heavy.eot");
+  src: local("Futura PT Heavy"), local("FuturaPT-Heavy"),
+    url("./assets/FuturaPT-Heavy.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-Heavy.woff2") format("woff2"),
+    url("./assets/FuturaPT-Heavy.woff") format("woff"),
+    url("./assets/FuturaPT-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("./assets/FuturaPT-DemiObl.eot");
+  src: local("Futura PT Demi Oblique"), local("FuturaPT-DemiObl"),
+    url("./assets/FuturaPT-DemiObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-DemiObl.woff2") format("woff2"),
+    url("./assets/FuturaPT-DemiObl.woff") format("woff"),
+    url("./assets/FuturaPT-DemiObl.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Extra";
+  src: url("./assets/FuturaPTCond-ExtraBoldObl.eot");
+  src: local("Futura PT Cond Extra Bold Oblique"),
+    local("FuturaPTCond-ExtraBoldObl"),
+    url("./assets/FuturaPTCond-ExtraBoldObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-ExtraBoldObl.woff2") format("woff2"),
+    url("./assets/FuturaPTCond-ExtraBoldObl.woff") format("woff"),
+    url("./assets/FuturaPTCond-ExtraBoldObl.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Book";
+  src: url("./assets/FuturaPTCond-Book.eot");
+  src: local("Futura PT Cond Book"), local("FuturaPTCond-Book"),
+    url("./assets/FuturaPTCond-Book.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-Book.woff2") format("woff2"),
+    url("./assets/FuturaPTCond-Book.woff") format("woff"),
+    url("./assets/FuturaPTCond-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/FuturaPT-LightObl.eot");
+  src: local("Futura PT Light Oblique"), local("FuturaPT-LightObl"),
+    url("./assets/FuturaPT-LightObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-LightObl.woff2") format("woff2"),
+    url("./assets/FuturaPT-LightObl.woff") format("woff"),
+    url("./assets/FuturaPT-LightObl.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("./assets/FuturaPT-BookObl.eot");
+  src: local("Futura PT Book Oblique"), local("FuturaPT-BookObl"),
+    url("./assets/FuturaPT-BookObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-BookObl.woff2") format("woff2"),
+    url("./assets/FuturaPT-BookObl.woff") format("woff"),
+    url("./assets/FuturaPT-BookObl.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/FuturaPT-HeavyObl.eot");
+  src: local("Futura PT Heavy Oblique"), local("FuturaPT-HeavyObl"),
+    url("./assets/FuturaPT-HeavyObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-HeavyObl.woff2") format("woff2"),
+    url("./assets/FuturaPT-HeavyObl.woff") format("woff"),
+    url("./assets/FuturaPT-HeavyObl.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("./assets/FuturaPTCond-BoldObl.eot");
+  src: local("Futura PT Cond Bold Oblique"), local("FuturaPTCond-BoldObl"),
+    url("./assets/FuturaPTCond-BoldObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-BoldObl.woff2") format("woff2"),
+    url("./assets/FuturaPTCond-BoldObl.woff") format("woff"),
+    url("./assets/FuturaPTCond-BoldObl.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("./assets/FuturaPT-Demi.eot");
+  src: local("Futura PT Demi"), local("FuturaPT-Demi"),
+    url("./assets/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-Demi.woff2") format("woff2"),
+    url("./assets/FuturaPT-Demi.woff") format("woff"),
+    url("./assets/FuturaPT-Demi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Book";
+  src: url("./assets/FuturaPTCond-BookObl.eot");
+  src: local("Futura PT Cond Book Oblique"), local("FuturaPTCond-BookObl"),
+    url("./assets/FuturaPTCond-BookObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-BookObl.woff2") format("woff2"),
+    url("./assets/FuturaPTCond-BookObl.woff") format("woff"),
+    url("./assets/FuturaPTCond-BookObl.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Extra";
+  src: url("./assets/FuturaPT-ExtraBold.eot");
+  src: local("Futura PT Extra Bold"), local("FuturaPT-ExtraBold"),
+    url("./assets/FuturaPT-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-ExtraBold.woff2") format("woff2"),
+    url("./assets/FuturaPT-ExtraBold.woff") format("woff"),
+    url("./assets/FuturaPT-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("./assets/FuturaPTCond-Medium.eot");
+  src: local("Futura PT Cond Medium"), local("FuturaPTCond-Medium"),
+    url("./assets/FuturaPTCond-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-Medium.woff2") format("woff2"),
+    url("./assets/FuturaPTCond-Medium.woff") format("woff"),
+    url("./assets/FuturaPTCond-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/FuturaPT-Medium.eot");
+  src: local("Futura PT Medium"), local("FuturaPT-Medium"),
+    url("./assets/FuturaPT-Medium.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-Medium.woff2") format("woff2"),
+    url("./assets/FuturaPT-Medium.woff") format("woff"),
+    url("./assets/FuturaPT-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Extra";
+  src: url("./assets/FuturaPTCond-ExtraBold.eot");
+  src: local("Futura PT Cond Extra Bold"), local("FuturaPTCond-ExtraBold"),
+    url("./assets/FuturaPTCond-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-ExtraBold.woff2") format("woff2"),
+    url("./assets/FuturaPTCond-ExtraBold.woff") format("woff"),
+    url("./assets/FuturaPTCond-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/FuturaPT-MediumObl.eot");
+  src: local("Futura PT Medium Oblique"), local("FuturaPT-MediumObl"),
+    url("./assets/FuturaPT-MediumObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-MediumObl.woff2") format("woff2"),
+    url("./assets/FuturaPT-MediumObl.woff") format("woff"),
+    url("./assets/FuturaPT-MediumObl.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("./assets/FuturaPTCond-Bold.eot");
+  src: local("Futura PT Cond Bold"), local("FuturaPTCond-Bold"),
+    url("./assets/FuturaPTCond-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-Bold.woff2") format("woff2"),
+    url("./assets/FuturaPTCond-Bold.woff") format("woff"),
+    url("./assets/FuturaPTCond-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/FuturaPT-BoldObl.eot");
+  src: local("Futura PT Bold Oblique"), local("FuturaPT-BoldObl"),
+    url("./assets/FuturaPT-BoldObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-BoldObl.woff2") format("woff2"),
+    url("./assets/FuturaPT-BoldObl.woff") format("woff"),
+    url("./assets/FuturaPT-BoldObl.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("./assets/FuturaPT-Book.eot");
+  src: local("Futura PT Book"), local("FuturaPT-Book"),
+    url("./assets/FuturaPT-Book.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-Book.woff2") format("woff2"),
+    url("./assets/FuturaPT-Book.woff") format("woff"),
+    url("./assets/FuturaPT-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/FuturaPT-Light.eot");
+  src: local("Futura PT Light"), local("FuturaPT-Light"),
+    url("./assets/FuturaPT-Light.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-Light.woff2") format("woff2"),
+    url("./assets/FuturaPT-Light.woff") format("woff"),
+    url("./assets/FuturaPT-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("./assets/FuturaPTCond-MediumObl.eot");
+  src: local("Futura PT Cond Medium Oblique"), local("FuturaPTCond-MediumObl"),
+    url("./assets/FuturaPTCond-MediumObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPTCond-MediumObl.woff2") format("woff2"),
+    url("./assets/FuturaPTCond-MediumObl.woff") format("woff"),
+    url("./assets/FuturaPTCond-MediumObl.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT Extra";
+  src: url("./assets/FuturaPT-ExtraBoldObl.eot");
+  src: local("Futura PT Extra Bold Oblique"), local("FuturaPT-ExtraBoldObl"),
+    url("./assets/FuturaPT-ExtraBoldObl.eot?#iefix") format("embedded-opentype"),
+    url("./assets/FuturaPT-ExtraBoldObl.woff2") format("woff2"),
+    url("./assets/FuturaPT-ExtraBoldObl.woff") format("woff"),
+    url("./assets/FuturaPT-ExtraBoldObl.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
 #app {
-  font-family: "Open sans";
+  font-family: "Futura PT";
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ec720c;
@@ -190,7 +458,7 @@ label {
   margin: auto;
 }
 .custom-heading {
-  font-family: "Noto Sans";
+  font-family: "Futura PT";
   font-size: 32px;
   font-weight: 500;
   line-height: 40px;
