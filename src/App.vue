@@ -1,12 +1,6 @@
 <template>
   <div id="app" class="row">
     <div class="col-lg-10 col-xl-10 col-md-12 wrapper-holder">
-      <div class="row m-0 custom-heading text-center">
-        <p class="heading-2">
-          To be invited to the event please let us know by completing your
-          details below.
-        </p>
-      </div>
       <div class="row m-0 error-heading" v-if="error">
         <div class="text-center">
           <div v-if="success" class="alert alert-success" role="alert">
@@ -383,7 +377,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ec720c;
-  margin-top: 60px;
 }
 .recaptcha div {
   width: 100% !important;
