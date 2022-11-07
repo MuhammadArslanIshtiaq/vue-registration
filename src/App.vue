@@ -376,7 +376,7 @@ export default {
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ec720c;
+  background: transparent;
 }
 .recaptcha div {
   width: 100% !important;
@@ -385,7 +385,7 @@ export default {
 
 html,
 body {
-  background: #ec720c;
+  background: transparent;
   width: 100%;
 }
 
